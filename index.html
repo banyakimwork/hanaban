@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김반야 강의 모음</title>
+<meta name="description" content="김반야의 AI·SNS 강의 모음. 듣고 싶은 강의를 골라 주세요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="김반야 강의 모음">
+<meta property="og:description" content="나만의 AI-OS 만들기 · SNS운영 실전 워크숍">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+  :root {
+    --bg: #F2F4F6;
+    --card: #FFFFFF;
+    --text: #191F28;
+    --sub: #4E5968;
+    --muted: #8B95A1;
+    --line: #E5E8EB;
+    --blue: #3182F6;
+    --blue-soft: #E8F3FF;
+    --green: #03B26C;
+    --green-soft: #E5F8EF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101113;
+      --card: #1C1D21;
+      --text: #F2F4F6;
+      --sub: #B0B8C1;
+      --muted: #8B95A1;
+      --line: #2C2E33;
+      --blue: #4C94F7;
+      --blue-soft: #1A2A42;
+      --green: #2FCB8A;
+      --green-soft: #15302A;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    min-height: 100vh;
+  }
+  main { max-width: 480px; margin: 0 auto; padding: 56px 16px 48px; }
+
+  header { text-align: center; margin-bottom: 32px; }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: var(--blue); color: #fff;
+    display: grid; place-items: center;
+    font-size: 28px; font-weight: 700;
+    margin: 0 auto 16px;
+  }
+  h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+  .role { font-size: 15px; color: var(--sub); margin-top: 6px; }
+  .pick { font-size: 15px; color: var(--muted); margin-top: 20px; }
+
+  .card {
+    display: block;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 24px 22px 20px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--line);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+  .card:active { transform: scale(.98); }
+
+  .tag {
+    display: inline-block;
+    font-size: 13px; font-weight: 600;
+    padding: 4px 10px; border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .tag.ai { background: var(--blue-soft); color: var(--blue); }
+  .tag.sns { background: var(--green-soft); color: var(--green); }
+
+  h2 { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; }
+  .desc { font-size: 15px; color: var(--sub); line-height: 1.55; margin-top: 8px; }
+
+  ul.facts { list-style: none; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+  ul.facts li { font-size: 14px; color: var(--sub); line-height: 1.5; display: flex; gap: 8px; }
+  ul.facts li + li { margin-top: 4px; }
+  ul.facts b { color: var(--muted); font-weight: 500; flex: 0 0 34px; }
+
+  .btn {
+    margin-top: 18px;
+    display: flex; align-items: center; justify-content: center;
+    height: 52px; border-radius: 14px;
+    font-size: 16px; font-weight: 600; color: #fff;
+  }
+  .ai .btn, .card.ai .btn { background: var(--blue); }
+  .card.sns .btn { background: var(--green); }
+
+  footer { text-align: center; font-size: 13px; color: var(--muted); margin-top: 28px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="avatar">반</div>
+    <h1>김반야</h1>
+    <p class="role">AI · SNS 마케팅 강의</p>
+    <p class="pick">듣고 싶은 강의를 골라 주세요.</p>
+  </header>
+
+  <a class="card ai" href="https://wiiskey.github.io/ai-os/" target="_blank" rel="noopener">
+    <span class="tag ai">AI 입문</span>
+    <h2>나만의 AI-OS 만들기</h2>
+    <p class="desc">클로드 코드로 나만의 AI 작업환경을 하루에 세팅하는 오프라인 워크숍이에요.</p>
+    <ul class="facts">
+      <li><b>일정</b>12월 5일(토) · 12월 19일(토)</li>
+      <li><b>시간</b>7시간</li>
+      <li><b>강사</b>위한솔 · 김반야</li>
+    </ul>
+    <span class="btn">강의 소개 보고 신청하기</span>
+  </a>
+
+  <a class="card sns" href="https://www.latpeed.com/products/YRhX1" target="_blank" rel="noopener">
+    <span class="tag sns">SNS 운영</span>
+    <h2>SNS운영 실전 워크숍</h2>
+    <p class="desc">크리에이터 · 브랜드 SNS 담당자를 위한 실습 워크숍이에요.<br>워크시트를 함께 채우며 내 계정에 바로 씁니다.</p>
+    <ul class="facts">
+      <li><b>일정</b>12월 10일(목) 오후 5시 ~ 9시</li>
+      <li><b>장소</b>강남역 인근</li>
+      <li><b>정원</b>15명</li>
+    </ul>
+    <span class="btn">신청하기</span>
+  </a>
+
+  <footer>신청 · 결제는 각 강의 페이지에서 진행돼요.</footer>
+</main>
+</body>
+</html>
