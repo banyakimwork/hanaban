@@ -75,7 +75,12 @@
   .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
   .card:active { transform: scale(.98); }
 
-  .top { display: flex; align-items: center; gap: 8px; }
+  .top { display: flex; align-items: center; gap: 10px; }
+  .top h2 { flex: 1 1 auto; min-width: 0; }
+  .ico { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; }
+  .ico svg { display: block; }
+  .ico.claude { background: #F6E9E2; }
+  .ico.insta { background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
   .tag {
     flex: 0 0 auto;
     font-size: 12px; font-weight: 600;
@@ -117,7 +122,7 @@
   </header>
 
   <a class="card ai" href="https://wiiskey.github.io/ai-os/" target="_blank" rel="noopener">
-    <div class="top"><span class="tag ai">AI 입문</span><h2>나만의 AI-OS 만들기</h2></div>
+    <div class="top"><span class="ico claude" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="12" x2="21.31" y2="13.89"/><line x1="12" y1="12" x2="19.12" y2="18.29"/><line x1="12" y1="12" x2="15.02" y2="21.01"/><line x1="12" y1="12" x2="10.11" y2="21.31"/><line x1="12" y1="12" x2="5.71" y2="19.12"/><line x1="12" y1="12" x2="2.99" y2="15.02"/><line x1="12" y1="12" x2="2.69" y2="10.11"/><line x1="12" y1="12" x2="4.88" y2="5.71"/><line x1="12" y1="12" x2="8.98" y2="2.99"/><line x1="12" y1="12" x2="13.89" y2="2.69"/><line x1="12" y1="12" x2="18.29" y2="4.88"/><line x1="12" y1="12" x2="21.01" y2="8.98"/></svg></span><h2>나만의 AI-OS 만들기</h2><span class="tag ai">AI 입문</span></div>
     <p class="desc">클로드 코드로 나만의 AI 작업환경을 하루에 세팅해요.</p>
     <ul class="facts">
       <li><b>일정</b>12/5(토) · 12/19(토) · 7시간</li>
@@ -127,8 +132,8 @@
   </a>
 
   <a class="card sns" href="https://www.latpeed.com/products/YRhX1" target="_blank" rel="noopener">
-    <div class="top"><span class="tag sns">SNS 운영</span><h2>SNS운영 실전 워크숍</h2></div>
-    <p class="desc">크리에이터 · 브랜드 SNS 담당자를 위한 실습 워크숍이에요.</p>
+    <div class="top"><span class="ico insta" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></span><h2>SNS운영 실전 워크숍</h2><span class="tag sns">SNS 운영</span></div>
+    <p class="desc">크리에이터 · 브랜드 SNS 담당자를 위한 실습이에요.</p>
     <ul class="facts">
       <li><b>일정</b>12/10(목) 오후 5~9시</li>
       <li><b>장소</b>강남역 인근 · 15명</li>
