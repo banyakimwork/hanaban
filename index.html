@@ -76,8 +76,9 @@
   .card:active { transform: scale(.98); }
 
   .top { display: flex; align-items: center; gap: 10px; }
-  .top h2 { flex: 1 1 auto; min-width: 0; }
-  .ico { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; }
+  .top .tt { flex: 1 1 auto; min-width: 0; }
+  .by { font-size: 13px; color: var(--sub); margin-top: 1px; line-height: 1.3; }
+  .ico { flex: 0 0 36px; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; }
   .ico svg { display: block; }
   .ico.claude { background: #F6E9E2; }
   .ico.insta { background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
@@ -106,6 +107,22 @@
   .card.sns .btn { background: var(--green); }
 
   footer { text-align: center; font-size: 13px; color: var(--muted); margin-top: 28px; line-height: 1.6; }
+
+  /* 강의별 색 — AI-OS = 하나반 상세페이지 민트(#8EEAD8) · SNS = 워크숍 소개페이지 노랑(#FFD43B) */
+  .card.ai  { background: #E8FAF6; border-color: #BFEFE4; }
+  .card.sns { background: #FFF8D9; border-color: #FBE7A1; }
+  .card.ai .btn  { background: #0B8C76; color: #fff; }
+  .card.sns .btn { background: #FFD43B; color: #191F28; }
+  .tag.ai  { background: #FFFFFF; color: #0B8C76; }
+  .tag.sns { background: #FFFFFF; color: #8A6A00; }
+  .card.ai .ico.claude { background: #FFFFFF; }
+  @media (prefers-color-scheme: dark) {
+    .card.ai  { background: #10302A; border-color: #1C4A41; }
+    .card.sns { background: #332B0F; border-color: #4D4116; }
+    .card.ai .btn { background: #8EEAD8; color: #0B0B0A; }
+    .tag.ai  { background: #1C4A41; color: #8EEAD8; }
+    .tag.sns { background: #4D4116; color: #FFD43B; }
+  }
 </style>
 </head>
 <body>
@@ -121,22 +138,21 @@
     </div>
   </header>
 
-  <a class="card ai" href="https://wiiskey.github.io/ai-os/" target="_blank" rel="noopener">
-    <div class="top"><span class="ico claude" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="12" x2="21.31" y2="13.89"/><line x1="12" y1="12" x2="19.12" y2="18.29"/><line x1="12" y1="12" x2="15.02" y2="21.01"/><line x1="12" y1="12" x2="10.11" y2="21.31"/><line x1="12" y1="12" x2="5.71" y2="19.12"/><line x1="12" y1="12" x2="2.99" y2="15.02"/><line x1="12" y1="12" x2="2.69" y2="10.11"/><line x1="12" y1="12" x2="4.88" y2="5.71"/><line x1="12" y1="12" x2="8.98" y2="2.99"/><line x1="12" y1="12" x2="13.89" y2="2.69"/><line x1="12" y1="12" x2="18.29" y2="4.88"/><line x1="12" y1="12" x2="21.01" y2="8.98"/></svg></span><h2>나만의 AI-OS 만들기</h2><span class="tag ai">AI 입문</span></div>
-    <p class="desc">클로드 코드로 나만의 AI 작업환경을 하루에 세팅해요.</p>
-    <ul class="facts">
-      <li><b>일정</b>12/5(토) · 12/19(토) · 7시간</li>
-      <li><b>강사</b>위한솔 · 김반야</li>
-    </ul>
-    <span class="btn">강의 소개 보고 신청하기</span>
-  </a>
-
   <a class="card sns" href="https://www.latpeed.com/products/YRhX1" target="_blank" rel="noopener">
-    <div class="top"><span class="ico insta" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></span><h2>SNS운영 실전 워크숍</h2><span class="tag sns">SNS 운영</span></div>
+    <div class="top"><span class="ico insta" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></span><div class="tt"><h2>SNS운영 실전 워크숍</h2><p class="by">김반야</p></div><span class="tag sns">SNS 운영</span></div>
     <p class="desc">크리에이터 · 브랜드 SNS 담당자를 위한 실습이에요.</p>
     <ul class="facts">
       <li><b>일정</b>12/10(목) 오후 5~9시</li>
       <li><b>장소</b>강남역 인근 · 15명</li>
+    </ul>
+    <span class="btn">강의 소개 보고 신청하기</span>
+  </a>
+
+  <a class="card ai" href="https://wiiskey.github.io/ai-os/" target="_blank" rel="noopener">
+    <div class="top"><span class="ico claude" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="12" x2="21.31" y2="13.89"/><line x1="12" y1="12" x2="19.12" y2="18.29"/><line x1="12" y1="12" x2="15.02" y2="21.01"/><line x1="12" y1="12" x2="10.11" y2="21.31"/><line x1="12" y1="12" x2="5.71" y2="19.12"/><line x1="12" y1="12" x2="2.99" y2="15.02"/><line x1="12" y1="12" x2="2.69" y2="10.11"/><line x1="12" y1="12" x2="4.88" y2="5.71"/><line x1="12" y1="12" x2="8.98" y2="2.99"/><line x1="12" y1="12" x2="13.89" y2="2.69"/><line x1="12" y1="12" x2="18.29" y2="4.88"/><line x1="12" y1="12" x2="21.01" y2="8.98"/></svg></span><div class="tt"><h2>나만의 AI-OS 만들기</h2><p class="by">위한솔 · 김반야</p></div><span class="tag ai">AI 입문</span></div>
+    <p class="desc">클로드 코드로 나만의 AI 작업환경을 하루에 세팅해요.</p>
+    <ul class="facts">
+      <li><b>일정</b>12/5(토) · 12/19(토) · 7시간</li>
     </ul>
     <span class="btn">강의 소개 보고 신청하기</span>
   </a>
